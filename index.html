@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- static site, nothing from third parties: only own files may load, no inline code, no forms, no frames, no plugins -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antoine de Lagrave · CV</title>
+<meta name="description" content="Antoine de Lagrave, Ph.D. student in condensed matter physics, Université de Sherbrooke. Topology of strongly correlated superconductors, quantum cluster methods.">
+<link rel="preload" href="fonts/LibertinusSerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="boot.js"></script>
+</head>
+
+<nav>
+  <span class="logo" tabindex="0" aria-describedby="logo-tip">adl<span class="logo-tip" id="logo-tip" role="tooltip"><span lang="fr">psst… tapez <b>snake</b> dans le terminal</span><span lang="en">psst… type <b>snake</b> in the terminal</span></span></span>
+  <div class="nav-links" aria-label="Table des matières / Contents">
+    <span class="toc-label"><span lang="fr">Sur cette page</span><span lang="en">On this page</span></span>
+    <a href="#recherche"><span lang="fr">Recherche</span><span lang="en">Research</span></a>
+    <a href="#publications">Publications</a>
+    <a href="#formation"><span lang="fr">Formation</span><span lang="en">Education</span></a>
+    <a href="#experience"><span lang="fr">Expérience</span><span lang="en">Experience</span></a>
+    <a href="#projets"><span lang="fr">Projets</span><span lang="en">Projects</span></a>
+    <a href="#presentations"><span lang="fr">Présentations</span><span lang="en">Talks</span></a>
+    <a href="#ecoles"><span lang="fr">Écoles</span><span lang="en">Schools</span></a>
+    </div>
+  <div class="nav-actions">
+    <a class="btn" href="cv-fr.pdf" lang="fr">PDF</a>
+    <a class="btn" href="cv-en.pdf" lang="en">PDF</a>
+    <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language / Changer de langue">
+      <span lang="fr">EN</span><span lang="en">FR</span>
+    </button>
+    <button class="lang-toggle theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Mode sombre / Dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero">
+  <h1>Antoine de Lagrave</h1>
+  <p class="tagline">
+    <span lang="fr">Doctorant en physique de la matière condensée</span>
+    <span lang="en">PhD student in condensed matter physics</span>
+  </p>
+  <p class="affil">
+    <a href="https://www.usherbrooke.ca/physique/"><span lang="fr">Département de physique</span><span lang="en">Department of Physics</span></a>
+    <span lang="fr">et</span><span lang="en">and</span>
+    <a href="https://www.usherbrooke.ca/iq/" lang="fr">Institut quantique</a><a href="https://www.usherbrooke.ca/iq/en/" lang="en">Institut quantique</a>,
+    <a href="https://www.usherbrooke.ca/">Université de Sherbrooke</a>
+  </p>
+  <p class="print-only print-contact">
+    <span>antoine.de.lagrave@usherbrooke.ca</span><span>github.com/antoinedelagrave</span><span>antoinedelagrave.github.io/cv</span>
+  </p>
+
+
+
+  <div class="term">
+    <div class="bar">
+      <i></i><i></i><i></i>
+      <div class="term-tabs" role="tablist" aria-label="Terminal">
+        <button role="tab" id="tab-projet" aria-controls="panel-projet" aria-selected="true">~/<span lang="fr">these</span><span lang="en">thesis</span></button>
+        <button role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1">~/contact</button>
+        <button role="tab" id="tab-snake" aria-controls="panel-snake" aria-selected="false" tabindex="-1" hidden>~/snake</button>
+      </div>
+    </div>
+    <button type="button" class="closed-msg">
+      <span class="start"><span class="p">$</span> <span class="cursor"></span><span class="ghost"><span lang="fr">cliquez pour ouvrir le terminal</span><span lang="en">click to open the terminal</span></span></span>
+      <span class="exited"><span lang="fr">[Processus terminé] · cliquez pour rouvrir</span><span lang="en">[Process completed] · click to reopen</span></span>
+    </button>
+    <div class="body" role="tabpanel" id="panel-projet" aria-labelledby="tab-projet">
+      <div class="intro"><span class="p">$</span> <span class="typed" data-fr="cat projet.md" data-en="cat project.md">cat <span lang="fr">projet.md</span><span lang="en">project.md</span></span><span class="cursor cmd-cursor"></span></div>
+      <dl class="out intro">
+        <dt><span lang="fr">projet</span><span lang="en">project</span></dt>
+        <dd><span lang="fr">Classification topologique ab initio des supraconducteurs fortement corrélés</span><span lang="en">Ab initio topological classification of strongly correlated superconductors</span></dd>
+        <dt><span lang="fr">méthodes</span><span lang="en">methods</span></dt>
+        <dd>DFT+CDMFT · <span lang="fr">diagonalisation exacte</span><span lang="en">exact diagonalization</span> · <span lang="fr">topologie par fonctions de Green</span><span lang="en">Green's function topology</span></dd>
+        <dt>codes</dt>
+        <dd>PyQCM · SB-CDMFT · dVMC</dd>
+        <dt><span lang="fr">direction</span><span lang="en">advisors</span></dt>
+        <dd>Maia G. Vergniory · David Sénéchal</dd>
+        <dt><span lang="fr">depuis</span><span lang="en">since</span></dt>
+        <dd><span lang="fr">septembre 2025</span><span lang="en">September 2025</span></dd>
+      </dl>
+      <div class="out prompt"><span class="p">$</span> <span class="cursor"></span></div>
+    </div>
+    <div class="body" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" hidden>
+      <div class="intro"><span class="p">$</span> <span class="typed" data-fr="cat contact.md" data-en="cat contact.md">cat contact.md</span><span class="cursor cmd-cursor"></span></div>
+      <dl class="out intro">
+        <dt><span lang="fr">courriel</span><span lang="en">email</span></dt>
+        <dd><a href="mailto:antoine.de.lagrave@usherbrooke.ca">antoine.de.lagrave@usherbrooke.ca</a></dd>
+        <dt>github</dt>
+        <dd><a href="https://github.com/antoinedelagrave">github.com/antoinedelagrave</a></dd>
+        <dt>linkedin</dt>
+        <dd><a href="https://www.linkedin.com/in/antoine-de-lagrave-1b9128353">linkedin.com/in/antoine-de-lagrave</a></dd>
+      </dl>
+      <div class="out prompt"><span class="p">$</span> <span class="cursor"></span></div>
+    </div>
+    <div class="body snake" role="tabpanel" id="panel-snake" aria-labelledby="tab-snake" tabindex="0" hidden>
+      <div class="intro"><span class="p">$</span> <span class="typed" data-fr="./snake" data-en="./snake">./snake</span><span class="cursor cmd-cursor"></span></div>
+      <pre class="out board" aria-label="Snake"></pre>
+      <div class="out snake-status"></div>
+    </div>
+  </div>
+</header>
+
+<section id="recherche">
+  <h2><span lang="fr">Recherche</span><span lang="en">Research</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>/qcm</h3>
+      <p><span lang="fr">Méthodes d'amas quantiques : CDMFT, périodisation, solutionneur d'impureté par diagonalisation exacte (ED).</span><span lang="en">Quantum cluster methods: CDMFT, periodization, exact diagonalization (ED) impurity solver.</span></p>
+    </div>
+    <div class="card">
+      <h3><span lang="fr">/topologie</span><span lang="en">/topology</span></h3>
+      <p><span lang="fr">Topologie fortement corrélée à partir de la fonction de Green à une particule, supraconductivité topologique</span><span lang="en">Strongly correlated topology from the one-particle Green's function, topological superconductivity.</span></p>
+    </div>
+    <div class="card">
+      <h3>/ab-initio</h3>
+      <p><span lang="fr">Développement de méthodes DFT+CDMFT pour des simulations ab initio de matériaux réalistes.</span><span lang="en">Development of DFT+CDMFT methods for realistic materials simulations.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="rows">
+    <div class="card pub">
+      <div class="venue">Nature Communications · 2026</div>
+      <h3>Controlling intertwined electronic orders in FeSe with exfoliation</h3>
+      <div class="authors">W. Liu, G. Natale, K.-M. Kim, B. Singh, P. Sakrikar, S. D. Funni, L. Kondo, A. Davignon, <strong>A. de Lagrave</strong>, K. Ishihara, M. Geiwitz, M. G. Vergniory, T. Shibauchi, J. S. Kim, M. Papaj, J. J. Cha, K. S. Burch</div>
+      <div class="links">
+        <a href="https://doi.org/10.1038/s41467-026-79535-0">doi:10.1038/s41467-026-79535-0</a>
+        <a href="https://arxiv.org/abs/2608.29407">arXiv:2608.29407</a>
+      </div>
+    </div>
+    <div class="card pub">
+      <div class="venue">Physical Review B 113, 165127 · 2026</div>
+      <h3>Subbath cluster dynamical mean-field theory</h3>
+      <div class="authors"><strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</div>
+      <p>
+        <span lang="fr">Travaux de maîtrise, premier auteur. Méthode intégrée au dépôt officiel de PyQCM.</span>
+        <span lang="en">M.Sc. work, first author. Method merged into the official PyQCM repository.</span>
+      </p>
+      <div class="links">
+        <a href="https://doi.org/10.1103/g5gl-sfk4">doi:10.1103/g5gl-sfk4</a>
+        <a href="https://arxiv.org/abs/2509.07931">arXiv:2509.07931</a>
+        <a href="https://github.com/antoinedelagrave/publications-data"><span lang="fr">données</span><span lang="en">data</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formation">
+  <h2><span lang="fr">Formation</span><span lang="en">Education</span></h2>
+  <div class="card rows">
+    <div class="row">
+      <div class="when">2025 – 2029</div>
+      <div>
+        <h3><span lang="fr">Doctorat en physique</span><span lang="en">Ph.D. in Physics</span></h3>
+        <div class="where">Université de Sherbrooke</div>
+        <ul>
+          <li><span lang="fr">Codirection : Maia G. Vergniory et David Sénéchal</span><span lang="en">Advisors: Maia G. Vergniory and David Sénéchal</span></li>
+          <li><span lang="fr">Projet : classification topologique ab initio des supraconducteurs fortement corrélés</span><span lang="en">Project: ab initio topological classification of strongly correlated superconductors</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2024 – 2026</div>
+      <div>
+        <h3><span lang="fr">Maîtrise en physique</span><span lang="en">M.Sc. in Physics</span></h3>
+        <div class="where">Université du Québec à Trois-Rivières <span lang="fr">et Université de Sherbrooke</span><span lang="en">&amp; Université de Sherbrooke</span></div>
+        <ul>
+          <li><span lang="fr">Mémoire : <em>Théorie de champ moyen dynamique sur amas avec sous-bains</em>, mention Excellent</span><span lang="en">Thesis: <em>Subbath cluster dynamical mean-field theory</em> (in French), graded Excellent</span></li>
+          <li><span lang="fr">Direction : Maxime Charlebois et David Sénéchal</span><span lang="en">Advisors: Maxime Charlebois and David Sénéchal</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2020 – 2023</div>
+      <div>
+        <h3><span lang="fr">Baccalauréat en physique (régime coopératif)</span><span lang="en">B.Sc. in Physics (coop program)</span></h3>
+        <div class="where">Université de Sherbrooke</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2><span lang="fr">Expérience de recherche</span><span lang="en">Research experience</span></h2>
+  <div class="card rows">
+    <div class="row">
+      <div class="when"><span lang="fr">janv. – févr. 2026</span><span lang="en">Jan – Feb 2026</span></div>
+      <div>
+        <h3><span lang="fr">Chercheur invité</span><span lang="en">Visiting researcher</span></h3>
+        <div class="where">Donostia International Physics Center (DIPC), <span lang="fr">Saint-Sébastien, Espagne</span><span lang="en">San Sebastián, Spain</span></div>
+        <p><span lang="fr">Groupe de Maia G. Vergniory.</span><span lang="en">Group of Maia G. Vergniory.</span></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2022 – 2023</div>
+      <div>
+        <h3><span lang="fr">Stagiaire de recherche, méthodes d'amas quantiques</span><span lang="en">Research intern, quantum cluster methods</span></h3>
+        <div class="where">Université du Québec à Trois-Rivières · <span lang="fr">automne 2022 et été 2023</span><span lang="en">Fall 2022 and Summer 2023</span></div>
+        <ul>
+          <li><span lang="fr">Interface du solutionneur dVMC avec PyQCM, restructuration aux normes d'un code publié, interface en ligne de commande</span><span lang="en">Interfaced the dVMC impurity solver with PyQCM, restructured it to published-code standards, and added a command-line interface</span></li>
+          <li><span lang="fr">Diagonalisation exacte du modèle de Hubbard en Rust ; calcul parallèle sur les grappes de Calcul Québec</span><span lang="en">Exact diagonalization of the 1D Hubbard model in Rust, parallel computing on Calcul Québec clusters</span></li>
+          <li><span lang="fr">Supervision : Maxime Charlebois</span><span lang="en">Supervisor: Maxime Charlebois</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="fr">janv. – mai 2022</span><span lang="en">Jan – May 2022</span></div>
+      <div>
+        <h3><span lang="fr">Stagiaire de recherche, apprentissage automatique</span><span lang="en">Research intern, machine learning</span></h3>
+        <div class="where"><span lang="fr">Conseil national de recherches du Canada (CNRC), Boucherville</span><span lang="en">National Research Council Canada (NRC), Boucherville</span></div>
+        <ul>
+          <li><span lang="fr">Apprentissage automatique et chimiométrie appliqués à la spectroscopie LIBS</span><span lang="en">Machine learning and chemometrics for laser-induced breakdown spectroscopy (LIBS)</span></li>
+          <li><span lang="fr">Supervision : Aissa Harhira</span><span lang="en">Supervisor: Aissa Harhira</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projets">
+  <h2><span lang="fr">Projets informatiques</span><span lang="en">Software projects</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://github.com/pyqcm-project/pyqcm"><span class="at">@</span>pyqcm</a></h3>
+      <div class="meta">Python · C++</div>
+      <p><span lang="fr">Méthodes d'amas quantiques et solutionneur d’impureté ED. CDMFT avec sous-bains.</span><span lang="en">Quantum cluster methods and ED impurity solver. Subbath CDMFT.</span></p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/antoinedelagrave/pyqcm-bath-parametrizer"><span class="at">@</span>pyqcm-bath-parametrizer</a></h3>
+      <div class="meta">Python</div>
+      <p><span lang="fr">Paramétrisation du bain en CDMFT basée sur la théorie des groupes.</span><span lang="en">CDMFT bath parametrization based on group theory.</span></p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/pyqcm-project/pyqcm-skill"><span class="at">@</span>pyqcm-skill</a></h3>
+      <div class="meta">Claude Code</div>
+      <p><span lang="fr">Skill Claude Code pour PyQCM.</span><span lang="en">Claude Code skill for PyQCM.</span></p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/antoinedelagrave/dvmc-impurity-solver"><span class="at">@</span>dvmc-impurity-solver</a></h3>
+      <div class="meta">C · Python</div>
+      <p><span lang="fr">Solutionneur d'impureté par Monte-Carlo variationnel dynamique.</span><span lang="en">Dynamical variational Monte Carlo impurity solver.</span></p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/antoinedelagrave/UniTeX"><span class="at">@</span>UniTeX</a></h3>
+      <div class="meta">LaTeX</div>
+      <p><span lang="fr">Gabarits LaTeX pour la rédaction scientifique.</span><span lang="en">LaTeX templates for scientific writing.</span></p>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/antoinedelagrave/hubbard-model-ed"><span class="at">@</span>hubbard-model-ed</a></h3>
+      <div class="meta">Rust</div>
+      <p><span lang="fr">Diagonalisation exacte du modèle de Hubbard en 1D.</span><span lang="en">Exact diagonalization of the 1D Hubbard model.</span></p>
+    </div>
+    <div class="card featured">
+      <h3><span class="at">@</span>edgetech_logger</h3>
+      <div class="meta">Python · PySide6</div>
+      <p><span lang="fr">Acquisition et suivi en direct d'un analyseur d'humidité EdgeTech PPM1. Logiciel officiel du CNRC à Boucherville depuis 2022, que j'entretiens toujours.</span><span lang="en">Acquisition and live monitoring for an EdgeTech PPM1 humidity analyzer. Official software at NRC Boucherville since 2022 still maintained by me.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="presentations">
+  <h2><span lang="fr">Présentations</span><span lang="en">Presentations</span></h2>
+  <div class="card rows">
+    <div class="row">
+      <div class="when"><span lang="fr">1–10 juill. 2026</span><span lang="en">Jul 1–10, 2026</span></div>
+      <div>
+        <h3>International School of Physics “Enrico Fermi”: Quantum Matter</h3>
+        <div class="where"><span lang="fr">École internationale · Varenna, Italie</span><span lang="en">International school · Varenna, Italy</span></div>
+        <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="fr">24–27 mars 2026</span><span lang="en">Mar 24–27, 2026</span></div>
+      <div>
+        <h3>eQMA School on Electron Correlations and Topology</h3>
+        <div class="where"><span lang="fr">École internationale · Rice University, Houston, États-Unis</span><span lang="en">International school · Rice University, Houston, USA</span></div>
+        <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="fr">2 févr. 2026</span><span lang="en">Feb 2, 2026</span></div>
+      <div>
+        <h3><span lang="fr">Séminaire invité, Universidad del País Vasco (UPV/EHU)</span><span lang="en">Invited seminar, University of the Basque Country (UPV/EHU)</span></h3>
+        <div class="where"><span lang="fr">Bilbao, Espagne · pendant ma visite au DIPC</span><span lang="en">Bilbao, Spain · during my DIPC visit</span></div>
+        <p><span lang="fr">Présentation :</span><span lang="en">Talk:</span> <em>Quantum Cluster Methods (QCMs)</em>. <strong>A. de Lagrave</strong></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="fr">18–22 août 2025</span><span lang="en">Aug 18–22, 2025</span></div>
+      <div>
+        <h3>Topological Matter School 2025</h3>
+        <div class="where"><span lang="fr">École internationale · Saint-Sébastien, Espagne</span><span lang="en">International school · San Sebastián, Spain</span></div>
+        <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when"><span lang="fr">6–11 juill. 2025</span><span lang="en">Jul 6–11, 2025</span></div>
+      <div>
+        <h3>International Conference on Strongly Correlated Electron Systems (SCES 2025)</h3>
+        <div class="where"><span lang="fr">Conférence internationale · Montréal, Canada</span><span lang="en">International conference · Montréal, Canada</span></div>
+        <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ecoles">
+  <h2><span lang="fr">Écoles et formation spécialisée</span><span lang="en">Schools and specialized training</span></h2>
+  <div class="card rows">
+    <div class="row"><div class="when"><span lang="fr">17–21 août 2026</span><span lang="en">Aug 17–21, 2026</span></div><div><h3>Topological Matter School 2026</h3><div class="where"><span lang="fr">Saint-Sébastien, Espagne</span><span lang="en">San Sebastián, Spain</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">1–10 juill. 2026</span><span lang="en">Jul 1–10, 2026</span></div><div><h3>International School of Physics “Enrico Fermi”: Quantum Matter</h3><div class="where">Varenna, <span lang="fr">Italie</span><span lang="en">Italy</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">mai – juin 2026</span><span lang="en">May – Jun 2026</span></div><div><h3><span lang="fr">École internationale d'été sur les méthodes numériques pour les matériaux quantiques 2026</span><span lang="en">International Summer School on Computational Quantum Materials 2026</span></h3><div class="where">Jouvence, Orford, <span lang="fr">Québec</span><span lang="en">Quebec</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">24–27 mars 2026</span><span lang="en">Mar 24–27, 2026</span></div><div><h3>eQMA School on Electron Correlations and Topology</h3><div class="where">Rice University, Houston, <span lang="fr">États-Unis</span><span lang="en">USA</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">18–22 août 2025</span><span lang="en">Aug 18–22, 2025</span></div><div><h3>Topological Matter School 2025</h3><div class="where"><span lang="fr">Saint-Sébastien, Espagne</span><span lang="en">San Sebastián, Spain</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">été 2024</span><span lang="en">Summer 2024</span></div><div><h3><span lang="fr">École internationale d'été sur les méthodes numériques pour les matériaux quantiques 2024</span><span lang="en">International Summer School on Computational Quantum Materials 2024</span></h3><div class="where">Jouvence, Orford, <span lang="fr">Québec</span><span lang="en">Quebec</span></div></div></div>
+    <div class="row"><div class="when"><span lang="fr">printemps 2023</span><span lang="en">Spring 2023</span></div><div><h3><span lang="fr">Programmation parallèle et calcul informatique de pointe</span><span lang="en">Parallel Programming and High-Performance Computing school</span></h3><div class="where">Bishop's University, Sherbrooke</div></div></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span><span lang="fr">© 2026 Antoine de Lagrave · mis à jour en novembre 2026</span><span lang="en">© 2026 Antoine de Lagrave · updated November 2026</span></span>
+  <span><a href="mailto:antoine.de.lagrave@usherbrooke.ca"><span lang="fr">Courriel</span><span lang="en">Email</span></a><a href="https://github.com/antoinedelagrave">GitHub</a><a href="https://www.linkedin.com/in/antoine-de-lagrave-1b9128353">LinkedIn</a></span>
+</footer>
+
+<script src="page.js"></script>
+<script src="terminal.js"></script>
+</body>
+</html>
