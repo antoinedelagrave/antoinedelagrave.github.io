@@ -271,17 +271,16 @@ nav .logo, .lang-toggle, .btn, .toc-label, .hashtags, .term, .term-tabs button, 
 }
 
 /* print: a classic academic CV, deliberately not a copy of the page. LaTeX look of his UniTeX templates
-   (Libertinus, black only, \texttt = Libertinus Mono for addresses), name in small caps with contacts on the
-   right, small-caps section titles over a hairline, dates flush right, numbered publications, conventional
-   section order (education first). Same HTML, so the two never disagree. */
+   (Libertinus, black only, code in Maple Mono), contacts on the right, section titles over a hairline,
+   dates flush right, numbered publications, conventional section order (education first). Same HTML,
+   so the two never disagree. */
 @media print {
   @page {
     size: letter; margin: 17mm 20mm 15mm;
     @bottom-left { content: "Antoine de Lagrave"; font: italic 9pt "Libertinus Serif", serif; }
     @bottom-right { content: counter(page) " / " counter(pages); font: 9pt "Libertinus Serif", serif; }
   }
-  :root, html[data-theme="dark"] { color-scheme: light; --bg: #fff; --card: #fff; --ink: #000; --muted: #000; --green: #000; --line: #000;
-          --mono: "Libertinus Mono", ui-monospace, monospace; }
+  :root, html[data-theme="dark"] { color-scheme: light; --bg: #fff; --card: #fff; --ink: #000; --muted: #000; --green: #000; --line: #000; }
   body { font-size: 10.5pt; line-height: 1.3; color: #000; }
   nav, .term, footer, .at, #recherche .card h3 { display: none !important; }
   a { color: #000; text-decoration: none; }
@@ -291,7 +290,7 @@ nav .logo, .lang-toggle, .btn, .toc-label, .hashtags, .term, .term-tabs button, 
   .hero { display: grid; grid-template-columns: 1fr auto; column-gap: 16pt; align-items: end; text-align: left;
           padding: 0 0 5pt; border-bottom: .8pt solid #000; }
   .hero > * { grid-column: 1; }
-  .hero h1 { font-size: 24pt; font-weight: 600; font-variant-caps: small-caps; letter-spacing: .02em; margin: 0 0 1pt; }
+  .hero h1 { font-size: 24pt; font-weight: 600; margin: 0 0 1pt; }
   .hero .tagline { font-size: 11pt; font-style: italic; color: #000; margin: 0; max-width: none; text-wrap: wrap; }
   .hero .affil { font-size: 10pt; margin: 1pt 0 0; }
   .print-contact { display: flex !important; flex-direction: column; align-items: flex-end;
@@ -303,7 +302,7 @@ nav .logo, .lang-toggle, .btn, .toc-label, .hashtags, .term, .term-tabs button, 
   #engagement { order: 9; } #interets { order: 10; }
 
   section { padding: 11pt 0 0; }
-  section > h2 { text-align: left; font-size: 12.5pt; font-weight: 600; font-variant-caps: small-caps; letter-spacing: .04em;
+  section > h2 { text-align: left; font-size: 12.5pt; font-weight: 600;
                  border-bottom: .5pt solid #000; padding-bottom: 1pt; margin: 0 0 5pt; break-after: avoid; }
 
   .card, .card.featured { background: none; border: 0; border-radius: 0; padding: 0; }
