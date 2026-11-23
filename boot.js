@@ -7,9 +7,11 @@
   l = l === "en" ? "en" : "fr";
   document.documentElement.lang = l;
   document.documentElement.dataset.lang = l;
-  // theme before first paint (no light flash): saved choice, then the system setting
+  // theme before first paint (no light flash): saved light/dark setting, otherwise automatic (the system setting)
   var th = null;
   try { th = localStorage.getItem("theme"); } catch (e) {}
+  if (th !== "light" && th !== "dark") th = null;
+  document.documentElement.dataset.themePref = th || "auto";
   document.documentElement.dataset.theme = th || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   document.documentElement.classList.add("js");  // terminal starts closed only when terminal.js can open it
   // if terminal.js fails to load, drop the class so the terminal shows open and static (load errors do not bubble)

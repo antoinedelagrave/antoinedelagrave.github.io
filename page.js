@@ -7,15 +7,25 @@ document.getElementById("lang-toggle").onclick = function () {
   document.dispatchEvent(new Event("langchange"));
 };
 
-// dark mode: the button shows a moon, filled when dark is on
+// theme: the button cycles automatic -> light -> dark; automatic follows the system setting live
 var themeBtn = document.getElementById("theme-toggle");
-themeBtn.setAttribute("aria-pressed", html.dataset.theme === "dark");
+var sysDark = matchMedia("(prefers-color-scheme: dark)");
+var THEME_LABEL = { auto: ["Thème : automatique", "Theme: automatic"], light: ["Thème : clair", "Theme: light"], dark: ["Thème : sombre", "Theme: dark"] };
+function applyTheme() {
+  var pref = html.dataset.themePref;
+  html.dataset.theme = pref === "auto" ? (sysDark.matches ? "dark" : "light") : pref;
+  themeBtn.title = THEME_LABEL[pref][html.dataset.lang === "en" ? 1 : 0];
+  themeBtn.setAttribute("aria-label", themeBtn.title);
+}
+applyTheme();
 themeBtn.onclick = function () {
-  var th = html.dataset.theme === "dark" ? "light" : "dark";
-  html.dataset.theme = th;
-  themeBtn.setAttribute("aria-pressed", th === "dark");
-  try { localStorage.setItem("theme", th); } catch (e) {}
+  var pref = { auto: "light", light: "dark", dark: "auto" }[html.dataset.themePref];
+  html.dataset.themePref = pref;
+  try { if (pref === "auto") localStorage.removeItem("theme"); else localStorage.setItem("theme", pref); } catch (e) {}
+  applyTheme();
 };
+sysDark.addEventListener("change", applyTheme);
+document.addEventListener("langchange", applyTheme);
 
 // scroll-spy: the active section is the last one whose top has passed 30% of the viewport
 var tocLinks = [].slice.call(document.querySelectorAll(".nav-links a"));

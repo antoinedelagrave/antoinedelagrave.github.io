@@ -379,7 +379,7 @@
           var c = [x, y];
           if (same(c, body[0])) row += '<span class="head">██</span>';
           else if (body.some(function (s) { return same(s, c); })) row += '<span class="seg">██</span>';
-          else if (food && same(c, food)) row += '<span class="food">&lt;&gt;</span>';
+          else if (food && same(c, food)) row += '<span class="food">@</span>';
           else row += "  ";
         }
         lines.push(row + "│");
