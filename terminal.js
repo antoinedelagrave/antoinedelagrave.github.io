@@ -101,7 +101,7 @@
     if (input) { input.value = ""; refresh(input); }
   }
   // the input is exactly as wide as its text, so the block cursor and the ghost suggestion sit right after it.
-  // ponytail: the block cursor always sits at the end of the line; editing mid-line with Left/Right is not drawn
+  // known limitation: the block cursor always sits at the end of the line; editing mid-line with Left/Right is not drawn
   function refresh(input) {
     var n = input.value.length;
     input.style.width = n + "ch";
@@ -277,7 +277,7 @@
       print(p, a === "en" ? "language: English" : "langue : français");
     },
     whoami: function (a, p) {
-      print(p, "Antoine de Lagrave · " + t("doctorant en physique de la matière condensée, Université de Sherbrooke",
+      print(p, "Antoine de Lagrave, " + t("doctorant en physique de la matière condensée, Université de Sherbrooke",
                                          "PhD student in condensed matter physics, Université de Sherbrooke"));
     },
     pwd: function (a, p) { print(p, "/home/adl/" + (p.id === "panel-contact" ? "contact" : t("these", "thesis"))); },
@@ -333,9 +333,11 @@
   function closeTerm() {
     clearTimeout(loopTimer); typingTimers.forEach(clearTimeout); snake.stop();
     animateHeight(function () { term.classList.remove("opened"); term.dataset.exited = "1"; });
+    closedMsg.classList.add("quiet");  // focus lands here for Enter to reopen, but typing `exit` is not navigation: no ring
     closedMsg.focus({ preventScroll: true });
   }
   closedMsg.addEventListener("click", openTerm);
+  closedMsg.addEventListener("blur", function () { closedMsg.classList.remove("quiet"); });
 
   // ---------- secret tab: snake ----------
   var snake = (function () {
@@ -386,13 +388,13 @@
       }
       lines.push(bottom);
       board.innerHTML = lines.join("\n");
-      var tail = "score " + score + " · best " + best;
+      var tail = "score " + score + ", best " + best;
       status.innerHTML = {
-        ready: touch ? t("touchez pour jouer · glissez pour tourner", "tap to play · swipe to turn")
-                     : t("espace ou entrée pour jouer · ←↑↓→ ou WASD · échap pour quitter", "space or enter to play · ←↑↓→ or WASD · esc to quit"),
+        ready: touch ? t("touchez pour jouer, glissez pour tourner", "tap to play, swipe to turn")
+                     : t("espace ou entrée pour jouer, ←↑↓→ ou WASD, échap pour quitter", "space or enter to play, ←↑↓→ or WASD, esc to quit"),
         run: tail,
-        pause: (touch ? t("pause · touchez pour reprendre", "paused · tap to resume") : t("pause · espace pour reprendre", "paused · space to resume")) + " · " + tail,
-        over: '<span class="food">game over</span> · ' + tail + " · " + (touch ? t("touchez pour rejouer", "tap to play again") : t("espace pour rejouer", "space to play again"))
+        pause: (touch ? t("pause, touchez pour reprendre", "paused, tap to resume") : t("pause, espace pour reprendre", "paused, space to resume")) + " (" + tail + ")",
+        over: '<span class="food">game over</span> (' + tail + "), " + (touch ? t("touchez pour rejouer", "tap to play again") : t("espace pour rejouer", "space to play again"))
       }[state];
     }
     function tick() {

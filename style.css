@@ -179,6 +179,7 @@ main { max-width: 980px; margin: 0 auto; padding: 0 24px; }
 }
 .term .closed-msg:hover .ghost, .term .closed-msg:hover .exited { color: #d7dccf; }
 .term .closed-msg:focus-visible { outline: 2px solid #9cc17a; outline-offset: -6px; border-radius: 8px; }
+.term .closed-msg.quiet:focus-visible { outline: none; }
 .term[data-exited] .closed-msg .start, .term:not([data-exited]) .closed-msg .exited { display: none; }
 .js .term:not(.opened) .body { display: none; }
 .js .term:not(.opened) .closed-msg { display: block; }
@@ -215,7 +216,8 @@ section > h2 { text-align: center; font-size: 38px; font-weight: 600; margin: 0 
 .row h3 { font: 600 18px/1.4 var(--serif); color: var(--ink); margin: 0; }
 .where { color: var(--muted); font-size: 16.5px; }
 .row p, .row ul, .card ul { margin: 3px 0 0; color: var(--muted); font-size: 16.5px; }
-ul { padding-left: 20px; }
+ul { padding-left: 20px; list-style-type: "\25C7\2002"; }  /* white diamond + en space */
+li::marker { font-size: .85em; }
 .amount { color: var(--ink); white-space: nowrap; }
 
 .pub .venue { font-style: italic; font-size: 16.5px; color: var(--green); }
@@ -326,7 +328,8 @@ nav .logo, .lang-toggle, .btn, .toc-label, .hashtags, .term, .term-tabs button, 
 
   /* research summary: three bullets, the /labels are site decoration */
   #recherche .grid { display: block; margin: 0; padding-left: 13pt; }
-  #recherche .card { display: list-item; list-style: disc; text-align: left; }
+  #recherche .card { display: list-item; list-style: "\25C7\2002"; text-align: left; }
+  #recherche .card::marker { font-size: .85em; }
   #recherche .card + .card { margin-top: 1pt; }
 
   /* publications: numbered references, title / authors / journal / identifiers */

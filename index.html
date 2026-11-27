@@ -12,9 +12,10 @@
 <link rel="stylesheet" href="style.css">
 <script src="boot.js"></script>
 </head>
+<body>
 
 <nav>
-  <span class="logo" tabindex="0" aria-describedby="logo-tip">adl<span class="logo-tip" id="logo-tip" role="tooltip"><span lang="fr">psst… tapez <b>snake</b> dans le terminal</span><span lang="en">psst… type <b>snake</b> in the terminal</span></span></span>
+  <span class="logo" tabindex="0" aria-describedby="logo-tip">adl<span class="logo-tip" id="logo-tip" role="tooltip"><span lang="fr">tapez <b>snake</b> dans le terminal</span><span lang="en">type <b>snake</b> in the terminal</span></span></span>
   <div class="nav-links" aria-label="Table des matières / Contents">
     <span class="toc-label"><span lang="fr">Sur cette page</span><span lang="en">On this page</span></span>
     <a href="#recherche"><span lang="fr">Recherche</span><span lang="en">Research</span></a>
@@ -70,7 +71,7 @@
     </div>
     <button type="button" class="closed-msg">
       <span class="start"><span class="p">$</span> <span class="cursor"></span><span class="ghost"><span lang="fr">cliquez pour ouvrir le terminal</span><span lang="en">click to open the terminal</span></span></span>
-      <span class="exited"><span lang="fr">[Processus terminé] · cliquez pour rouvrir</span><span lang="en">[Process completed] · click to reopen</span></span>
+      <span class="exited">[<span lang="fr">Processus terminé</span><span lang="en">Process completed</span>] <span class="ghost"><span lang="fr">cliquez pour rouvrir</span><span lang="en">click to reopen</span></span></span>
     </button>
     <div class="body" role="tabpanel" id="panel-projet" aria-labelledby="tab-projet">
       <div class="intro"><span class="p">$</span> <span class="typed" data-fr="cat projet.md" data-en="cat project.md">cat <span lang="fr">projet.md</span><span lang="en">project.md</span></span><span class="cursor cmd-cursor"></span></div>
@@ -130,7 +131,7 @@
   <h2>Publications</h2>
   <div class="rows">
     <div class="card pub">
-      <div class="venue">Nature Communications · 2026</div>
+      <div class="venue">Nature Communications (2026)</div>
       <h3>Controlling intertwined electronic orders in FeSe with exfoliation</h3>
       <div class="authors">W. Liu, G. Natale, K.-M. Kim, B. Singh, P. Sakrikar, S. D. Funni, L. Kondo, A. Davignon, <strong>A. de Lagrave</strong>, K. Ishihara, M. Geiwitz, M. G. Vergniory, T. Shibauchi, J. S. Kim, M. Papaj, J. J. Cha, K. S. Burch</div>
       <div class="links">
@@ -139,7 +140,7 @@
       </div>
     </div>
     <div class="card pub">
-      <div class="venue">Physical Review B 113, 165127 · 2026</div>
+      <div class="venue">Physical Review B 113, 165127 (2026)</div>
       <h3>Subbath cluster dynamical mean-field theory</h3>
       <div class="authors"><strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</div>
       <div class="links">
@@ -201,7 +202,7 @@
       <div class="when">2022 – 2023</div>
       <div>
         <h3><span lang="fr">Stagiaire de recherche, méthodes d'amas quantiques</span><span lang="en">Research intern, quantum cluster methods</span></h3>
-        <div class="where">Université du Québec à Trois-Rivières · <span lang="fr">automne 2022 et été 2023</span><span lang="en">Fall 2022 and Summer 2023</span></div>
+        <div class="where">Université du Québec à Trois-Rivières, <span lang="fr">automne 2022 et été 2023</span><span lang="en">Fall 2022 and Summer 2023</span></div>
         <ul>
           <li><span lang="fr">Interface du solutionneur dVMC avec PyQCM, restructuration aux normes d'un code publié, interface en ligne de commande</span><span lang="en">Interfaced the dVMC impurity solver with PyQCM, restructured it to published-code standards, and added a command-line interface</span></li>
           <li><span lang="fr">Diagonalisation exacte du modèle de Hubbard en Rust ; calcul parallèle sur les grappes de Calcul Québec</span><span lang="en">Exact diagonalization of the 1D Hubbard model in Rust, parallel computing on Calcul Québec clusters</span></li>
@@ -228,7 +229,7 @@
   <div class="grid">
     <div class="card">
       <h3><a href="https://github.com/pyqcm-project/pyqcm"><span class="at">@</span>pyqcm</a></h3>
-      <div class="meta">Python · C++</div>
+      <div class="meta">Python, C++</div>
       <p><span lang="fr">Méthodes d'amas quantiques et solutionneur d’impureté ED. CDMFT avec sous-bains.</span><span lang="en">Quantum cluster methods and ED impurity solver. Subbath CDMFT.</span></p>
     </div>
     <div class="card">
@@ -243,7 +244,7 @@
     </div>
     <div class="card">
       <h3><a href="https://github.com/antoinedelagrave/dvmc-impurity-solver"><span class="at">@</span>dvmc-impurity-solver</a></h3>
-      <div class="meta">C · Python</div>
+      <div class="meta">C, Python</div>
       <p><span lang="fr">Solutionneur d'impureté par Monte-Carlo variationnel dynamique.</span><span lang="en">Dynamical variational Monte Carlo impurity solver.</span></p>
     </div>
     <div class="card">
@@ -258,7 +259,7 @@
     </div>
     <div class="card featured">
       <h3><span class="at">@</span>edgetech_logger</h3>
-      <div class="meta">Python · PySide6</div>
+      <div class="meta">Python, PySide6</div>
       <p><span lang="fr">Acquisition et suivi en direct d'un analyseur d'humidité EdgeTech PPM1. Logiciel officiel du CNRC à Boucherville depuis 2022, que j'entretiens toujours.</span><span lang="en">Acquisition and live monitoring for an EdgeTech PPM1 humidity analyzer. Official software at NRC Boucherville since 2022 still maintained by me.</span></p>
     </div>
   </div>
@@ -271,7 +272,7 @@
       <div class="when"><span lang="fr">1–10 juill. 2026</span><span lang="en">Jul 1–10, 2026</span></div>
       <div>
         <h3>International School of Physics “Enrico Fermi”: Quantum Matter</h3>
-        <div class="where"><span lang="fr">École internationale · Varenna, Italie</span><span lang="en">International school · Varenna, Italy</span></div>
+        <div class="where"><span lang="fr">École internationale, Varenna, Italie</span><span lang="en">International school, Varenna, Italy</span></div>
         <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
       </div>
     </div>
@@ -279,7 +280,7 @@
       <div class="when"><span lang="fr">24–27 mars 2026</span><span lang="en">Mar 24–27, 2026</span></div>
       <div>
         <h3>eQMA School on Electron Correlations and Topology</h3>
-        <div class="where"><span lang="fr">École internationale · Rice University, Houston, États-Unis</span><span lang="en">International school · Rice University, Houston, USA</span></div>
+        <div class="where"><span lang="fr">École internationale, Rice University, Houston, États-Unis</span><span lang="en">International school, Rice University, Houston, USA</span></div>
         <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
       </div>
     </div>
@@ -287,7 +288,7 @@
       <div class="when"><span lang="fr">2 févr. 2026</span><span lang="en">Feb 2, 2026</span></div>
       <div>
         <h3><span lang="fr">Séminaire invité, Universidad del País Vasco (UPV/EHU)</span><span lang="en">Invited seminar, University of the Basque Country (UPV/EHU)</span></h3>
-        <div class="where"><span lang="fr">Bilbao, Espagne · pendant ma visite au DIPC</span><span lang="en">Bilbao, Spain · during my DIPC visit</span></div>
+        <div class="where"><span lang="fr">Bilbao, Espagne (pendant ma visite au DIPC)</span><span lang="en">Bilbao, Spain (during my DIPC visit)</span></div>
         <p><span lang="fr">Présentation :</span><span lang="en">Talk:</span> <em>Quantum Cluster Methods (QCMs)</em>. <strong>A. de Lagrave</strong></p>
       </div>
     </div>
@@ -295,7 +296,7 @@
       <div class="when"><span lang="fr">18–22 août 2025</span><span lang="en">Aug 18–22, 2025</span></div>
       <div>
         <h3>Topological Matter School 2025</h3>
-        <div class="where"><span lang="fr">École internationale · Saint-Sébastien, Espagne</span><span lang="en">International school · San Sebastián, Spain</span></div>
+        <div class="where"><span lang="fr">École internationale, Saint-Sébastien, Espagne</span><span lang="en">International school, San Sebastián, Spain</span></div>
         <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
       </div>
     </div>
@@ -303,7 +304,7 @@
       <div class="when"><span lang="fr">6–11 juill. 2025</span><span lang="en">Jul 6–11, 2025</span></div>
       <div>
         <h3>International Conference on Strongly Correlated Electron Systems (SCES 2025)</h3>
-        <div class="where"><span lang="fr">Conférence internationale · Montréal, Canada</span><span lang="en">International conference · Montréal, Canada</span></div>
+        <div class="where"><span lang="fr">Conférence internationale, Montréal, Canada</span><span lang="en">International conference, Montréal, Canada</span></div>
         <p><span lang="fr">Affiche :</span><span lang="en">Poster:</span> <em>Subbath cluster dynamical mean-field theory</em>. <strong>A. de Lagrave</strong>, D. Sénéchal, M. Charlebois</p>
       </div>
     </div>
@@ -326,7 +327,7 @@
 </main>
 
 <footer>
-  <span><span lang="fr">© 2026 Antoine de Lagrave · mis à jour en novembre 2026</span><span lang="en">© 2026 Antoine de Lagrave · updated November 2026</span></span>
+  <span><span lang="fr">© 2026 Antoine de Lagrave. Mis à jour en novembre 2026.</span><span lang="en">© 2026 Antoine de Lagrave. Updated November 2026.</span></span>
   <span><a href="mailto:antoine.de.lagrave@usherbrooke.ca"><span lang="fr">Courriel</span><span lang="en">Email</span></a><a href="https://github.com/antoinedelagrave">GitHub</a><a href="https://www.linkedin.com/in/antoine-de-lagrave-1b9128353">LinkedIn</a></span>
 </footer>
 
